@@ -5,14 +5,28 @@ class Javabuzz {
   
     isDivisibleByThree(number) {
       return this._isDivisibleBy(number, 3);
+      debugger;
     }
 
     isDivisibleByFive(number) {
       return this._isDivisibleBy(number, 5);
     }
 
-    isDivisibleByFiveAndThree(number) {
+    isDivisibleByFifteen(number) {
       return this._isDivisibleBy(number, 15);
     }
 
+  says(number) {
+    if (this.isDivisibleByFifteen(number)) {
+      return "JavaBuzz";
+    }
+
+    if (this.isDivisibleByFive(number)) {
+      return "Buzz";
+    }
+
+    if (this.isDivisibleByThree(number)) {
+      return "Java";
+    }
+  }
 }
